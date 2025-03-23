@@ -17,11 +17,14 @@ Feel free to contact me or support my work:
 - [Github](https://github.com/CDSoft)
 - [LinkedIn](https://www.linkedin.com/in/cdelord/)
 - [![I'm a Haskeller](cv/haskeller.png)](https://www.haskellers.com/user/cdsoft)
-- [Liberapay](https://liberapay.com/LuaX/donate): <script src="https://liberapay.com/LuaX/widgets/button.js"></script><noscript><a href="https://liberapay.com/LuaX/donate"><img alt="Donate using Liberapay" src="https://liberapay.com/assets/widgets/donate.svg"></a></noscript>
 
-Or take a look at some personal projects here.
+@@[[ donate = function(url) return function(img) return function(alt)
+    return ("<a href='%s' target='_blank'><img height='36' style='border:0px;height:36px;' src='%s' border='0' alt='%s' /></a>"):format(url, img, alt)
+end end end]]
 
-<iframe src="https://github.com/sponsors/CDSoft/card" title="Sponsor CDSoft" height="225" width="600" style="border: 0;"></iframe>
+@donate "https://liberapay.com/LuaX/donate"  "https://liberapay.com/assets/widgets/donate.svg"                                              "Donate using Liberapay"
+@donate "https://ko-fi.com/K3K11CD108"       "https://storage.ko-fi.com/cdn/kofi6.png?v=6"                                                  "Buy Me a Coffee at ko-fi.com"
+@donate "https://github.com/sponsors/CDSoft" "https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" "Donate using Github"
 
 My old website is still available at [christophe.delord.free.fr](http://christophe.delord.free.fr)
 but may be outdated.
