@@ -74,6 +74,11 @@ ls("*.ypp", true) : foreach(function(file)
     build.ypp(file:splitext()) { file }
 end)
 
+build.cp "get-luax.sh"     "../luax-releases/get-luax.sh"
+build.cp "get-pandoc.sh"   "../luax-releases/get-pandoc.sh"
+build.cp "get-typst.sh"    "../luax-releases/get-typst.sh"
+build.cp "get-plantuml.sh" "../luax-releases/get-plantuml.sh"
+
 ---------------------------------------------------------------------
 -- Redirections
 ---------------------------------------------------------------------
