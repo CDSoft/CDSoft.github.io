@@ -9,7 +9,7 @@ local MARGIN = 1*k
 local WHITE = "#eeeeee"
 local BLUE = "#4c628b"
 
-local URL = "https://CDSoft.github.io"
+local URL = "https://cdelord.fr"
 local TEL = ""
 
 img {
@@ -42,7 +42,7 @@ end
 
 local function logo_luax()
     local size = Y/2 - MARGIN
-    local logo = fs.read(os.getenv"HOME"/"src/CDSoft/luax/doc/luax-logo.svg")
+    local logo = fs.read(os.getenv"HOME"/"src/luax/doc/luax-logo.svg")
     return G { transform=("scale(%f) translate(%f %f)"):format(size/256, X*1/64, Y*1/64),
         Raw(logo),
         G {

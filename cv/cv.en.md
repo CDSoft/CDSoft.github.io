@@ -9,7 +9,7 @@ Christophe Delord
 
     Age: @AGE year old -- born in @PPM PPM
 
-    contact: [cdsoft.github.io](https://cdsoft.github.io) - [github/CDSoft](https://github.com/CDSoft) -- [LinkedIn](https://www.linkedin.com/in/cdelord/)
+    contact: [cdsoft.codeberg.page](https://cdsoft.codeberg.page) -- [codeberg/cdsoft](https://codeberg.org/cdsoft) -- [github/CDSoft](https://github.com/CDSoft) -- [LinkedIn](https://www.linkedin.com/in/cdelord/)
 
 ## Experience
 

@@ -1,5 +1,13 @@
 # CDSoft / Christophe Delord
 
+## Important
+
+These pages are outdated.
+
+I'm migrating my Github repositories to [Codeberg](https://codeberg.org/cdsoft).
+
+Please visit [codeberg/cdsoft](https://codeberg.org/cdsoft) and [cdsoft.codeberg.page](https://cdsoft.codeberg.page) instead.
+
 ## About me
 
 Welcome to my personal web site.
@@ -14,6 +22,7 @@ Feel free to contact me or support my work:
 
 - [CV/Resume](cv/cv.en.html)
 - [email](mailto:@email)
+- [Codeberg](https://codeberg.org/cdsoft)
 - [Github](https://github.com/CDSoft)
 - [LinkedIn](https://www.linkedin.com/in/cdelord/)
 - [![I'm a Haskeller](cv/haskeller.png)](https://www.haskellers.com/user/cdsoft)
@@ -22,12 +31,8 @@ Feel free to contact me or support my work:
     return ("<a href='%s' target='_blank'><img height='36' style='border:0px;height:36px;' src='%s' border='0' alt='%s' /></a>"):format(url, img, alt)
 end end end]]
 
-@donate "https://liberapay.com/LuaX/donate"  "https://liberapay.com/assets/widgets/donate.svg"                                              "Donate using Liberapay"
-@donate "https://ko-fi.com/K3K11CD108"       "https://storage.ko-fi.com/cdn/kofi6.png?v=6"                                                  "Buy Me a Coffee at ko-fi.com"
-@donate "https://github.com/sponsors/CDSoft" "https://img.shields.io/static/v1?label=Sponsor&message=%E2%9D%A4&logo=GitHub&color=%23fe8e86" "Donate using Github"
-
-My old website is still available at [christophe.delord.free.fr](http://christophe.delord.free.fr)
-but may be outdated.
+@donate "https://liberapay.com/LuaX/donate"  "https://liberapay.com/assets/widgets/donate.svg" "Donate using Liberapay"
+@donate "https://ko-fi.com/K3K11CD108"       "https://storage.ko-fi.com/cdn/kofi6.png?v=6"     "Buy Me a Coffee at ko-fi.com"
 
 ## News
 
@@ -51,15 +56,15 @@ I'm found of free and open source softwares.
 I'm working with GNU/Linux and programming most of the time in Haskell, Lua and C.
 This page lists some of my personal projects.
 
-**Note**: these projects are available on [Github](https://github.com/CDSoft).
+**Note**: these projects are available on <@git_url>.
 It is generally highly recommended to recompile them from sources.
-In case you need some precompiled binaries, some can be found here: @(gh"luax-releases").
+In case you need some precompiled binaries, some can be found here: [pub](@storage_url/pub).
 
 @comment[[
 ## Programming
 
 * @(gh "hey"):
-  helper script to install some [CDSoft](https://github.com/CDSoft) programs and related softwares.
+  helper script to install some <@git_url> programs and related softwares.
 
 * @(oldgh("makex", "hey")):
   Some projects presented here are based on Lua and share a common infrastructure (LuaX, Pandoc, ypp, lsvg, ...).

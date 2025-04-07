@@ -1,1 +1,1 @@
-<link rel="icon" href="https://cdsoft.github.io/favicon.svg"/>
+<link rel="icon" href="favicon.svg"/>

@@ -6,7 +6,8 @@
 
 Christophe Delord
 :   4 rue du Lac d'Oô, 81370 Saint Sulpice <br>
-    web : <https://cdsoft.github.io> <br>
+    web : <https://cdsoft.codeberg.page> <br>
+    Codeberg : <https://codeberg.org/cdsoft> <br>
     github : <https://github.com/CDSoft> <br>
     LinkedIn : <https://www.linkedin.com/in/cdelord> <br>
     @AGE ans -- né en @PPM PPM
@@ -64,7 +65,7 @@ Normes de sécurité
 [Modélisation/simulation](http://christophe.delord.free.fr/fun)
 :   **Modéliser, simuler et vérifier des systèmes critiques temps réel** avec des langages fonctionnels ([Haskell](http://haskell.org))
 
-[Site web personnel](https://cdsoft.github.io)
+[Site web personnel](https://cdsoft.codeberg.page)
 :   écrit en Markdown, Pandoc, bang/ninja et LuaX
 
 @gh"TPG", @gh"SP"
