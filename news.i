@@ -1,5 +1,10 @@
+:new: **April 2025**
+: [pub](@storage_url/pub) now  provides archives for [CDSoft](@git_url) programs.
+
+@@(comment[===[
 :new: **January 2025**
-: @gh "luax-releases" provides archives for [CDSoft](https://github.com/CDSoft) programs.
+: @gh "luax-releases" provides archives for [CDSoft](@git_url) programs.
+]===])
 
 :new: **Novembre 2023**
 : @gh "bang" now replaces `make` to build nearly all my softwares

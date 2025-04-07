@@ -27,7 +27,7 @@ filters:insert {
 }
 
 -------------------------------------------------------------------------------
--- correction des liens internes aux projets vers github
+-- correction des liens internes aux projets vers codeberg
 -------------------------------------------------------------------------------
 
 filters[#filters].RawBlock = filters[#filters].RawInline
