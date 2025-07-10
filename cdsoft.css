@@ -1,74 +1,378 @@
-body {
-   max-width: 30em;
-   margin: auto;
-   padding-left: 0.5em;
-   padding-right: 0.5em;
+/*!
+ * cdsoft.css
+ * Copyright (C) 2025 CDSoft, Christophe Delord
+ *
+ * This file is licensed under the GNU Lesser General Public License v3.0.
+ * See the LICENSE file or https://www.gnu.org/licenses/lgpl-3.0.html
+ *
+ * For further information you can visit
+ * https://codeberg.org/cdsoft/styling
+ */
+
+/* CSS pour documents HTML générés par Pandoc */
+/* Support des thèmes light et dark avec la fonction light-dark() */
+
+:root {
+  color-scheme: light dark;
+
+  /* Variables pour les couleurs */
+  --text-color: light-dark(#333333, #e0e0e0);
+  --bg-color: light-dark(#ffffff, #1a1a1a);
+  --link-color: light-dark(#0066cc, #66b3ff);
+  --link-hover: light-dark(#004499, #3399ff);
+  --link-bg-hover: light-dark(rgba(0, 102, 204, 0.1), rgba(102, 179, 255, 0.15));
+  --link-border-hover: light-dark(rgba(0, 102, 204, 0.3), rgba(102, 179, 255, 0.4));
+  --group-bg: light-dark(#f8f9fa, #2a2a2a);
+  --group-border: light-dark(#dee2e6, #495057);
+  --border-color: light-dark(#dddddd, #444444);
+  --code-bg: light-dark(#f5f5f5, #2d2d2d);
+  --code-border: light-dark(#e0e0e0, #404040);
+  --blockquote-bg: light-dark(#f9f9f9, #262626);
+  --blockquote-border: light-dark(#cccccc, #555555);
+  --table-border: light-dark(#dddddd, #444444);
+  --table-header-bg: light-dark(#f0f0f0, #333333);
+
+  /* Variables pour les titres */
+  --h1-bg: light-dark(#f8f9fa, #2a2a2a);
+  --h1-border: light-dark(#dee2e6, #495057);
+  --h2-bg: light-dark(#f1f3f4, #2d2d2d);
+  --h2-border: light-dark(#e9ecef, #4a4a4a);
 }
 
-/* links */
+/* Styles de base */
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  max-width: 30em;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+/* Styles pour les titres H1 et H2 avec bordures arrondies */
+
+h1 {
+  font-size: 2.2em;
+  margin: 2em 0 1em 0;
+  padding: 20px 25px;
+  background-color: var(--h1-bg);
+  border: 2px solid var(--h1-border);
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+h2 {
+  font-size: 1.8em;
+  margin: 1.8em 0 0.8em 0;
+  padding: 15px 20px;
+  background-color: var(--h2-bg);
+  border: 1px solid var(--h2-border);
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.2s ease;
+}
+
+h3 {
+  font-size: 1.4em;
+  margin: 1.5em 0 0.5em 0;
+  color: var(--text-color);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 5px;
+}
+
+h4, h5, h6 {
+  font-size: 1.2em;
+  margin: 1.2em 0 0.5em 0;
+  color: var(--text-color);
+}
+
+/* Liens */
 
 a {
-    color: #444499;
-    background-color: white;
-    /* border: thin dotted #444499; */
-    border-radius: 4px;
+  color: var(--link-color);
+  text-decoration: none;
+  padding: 2px 4px;
+  border-radius: 4px;
+  transition: all 0.1s ease;
+  position: relative;
 }
 
 a:hover {
-    color: white;
-    background-color: #444499;
-    border: thin dotted white;
-    border-radius: 4px;
+  color: var(--link-hover);
+  background-color: var(--link-bg-hover);
+  /*border: 1px solid var(--link-border-hover);*/
+  text-decoration: none;
+  /*transform: translateY(-1px);*/
 }
 
 .group {
-    color: white;
-    background-color: gray;
+    color: var(--text-color);
+    background-color: var(--group-bg);
     padding: 4px;
     border-radius: 2px;
 }
 
-/* Header */
+/* Paragraphes */
 
-h1.title {
-    text-align: center;
-    border-radius: 20px;
-    padding: 4px;
-    background-color: #444499;
-    color: #eeeeee;
-    border: thick solid black;
+p {
+  margin: 1em 0;
+  /*text-align: justify;*/
 }
 
-h1.title a {
-    text-decoration: none;
-    background-color: #444499;
-    color: #eeeeee;
+/* Listes */
+
+ul, ol {
+  margin: 1em 0;
+  padding-left: 2em;
 }
 
-p.author, p.date {
-    text-align: center;
-    padding: 4px;
-    background-color: white;
-    color: black;
-    border: none;
+li {
+  margin: 0.3em 0;
 }
 
-h2.author a, h3.date a {
-    text-decoration: none;
-    background-color: white;
-    color: #444499;
+/* Code inline et blocs de code */
+
+code {
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 4px;
+  padding: 2px 6px;
+  font-family: 'Fira Code', 'Source Code Pro', Consolas, Menlo, 'DejaVu Sans Mono', monospace;
+  font-size: 0.9em;
 }
 
-/* table of content */
+pre {
+  background-color: var(--code-bg);
+  border: 1px solid var(--code-border);
+  border-radius: 6px;
+  padding: 15px;
+  overflow-x: auto;
+  margin: 1.5em 0;
+}
+
+pre code {
+  background: none;
+  border: none;
+  padding: 0;
+  font-size: 0.85em;
+  line-height: 1.4;
+}
+
+/* Citations */
+
+blockquote {
+  background-color: var(--blockquote-bg);
+  border-left: 4px solid var(--blockquote-border);
+  margin: 1.5em 0;
+  padding: 15px 20px;
+  border-radius: 0 6px 6px 0;
+  font-style: italic;
+}
+
+blockquote p {
+  margin: 0.5em 0;
+}
+
+/* Tableaux */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1.5em 0;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid var(--table-border);
+}
+
+th, td {
+  padding: 12px 15px;
+  text-align: left;
+  border-bottom: 1px solid var(--table-border);
+}
+
+th {
+  background-color: var(--table-header-bg);
+  font-weight: 600;
+}
+
+tr:last-child td {
+  border-bottom: none;
+}
+
+/* Lignes horizontales */
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: var(--border-color);
+  margin: 2em 0;
+}
+
+/* Images */
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Figures */
+
+figure {
+  margin: 1.5em 0;
+  text-align: center;
+}
+
+figcaption {
+  font-style: italic;
+  color: light-dark(#666666, #aaaaaa);
+  margin-top: 0.5em;
+  font-size: 0.9em;
+}
+
+/* Styles spécifiques pour Pandoc */
+
+.sourceCode {
+  background-color: var(--code-bg);
+  /*border: 1px solid var(--code-border);*/
+  /*border-radius: 6px;*/
+  /*padding: 15px;*/
+  overflow-x: auto;
+}
+
+/* Coloration syntaxique pour les deux thèmes */
+
+/* Alertes et erreurs */
+code span.al { color: light-dark(#ff0000, #ff6b6b); font-weight: bold; }
+code span.er { color: light-dark(#ff0000, #ff6b6b); font-weight: bold; }
+
+/* Annotations et commentaires */
+code span.an { color: light-dark(#60a0b0, #8cc8ff); font-weight: bold; font-style: italic; }
+code span.co { color: light-dark(#60a0b0, #8cc8ff); font-style: italic; }
+code span.cv { color: light-dark(#60a0b0, #8cc8ff); font-weight: bold; font-style: italic; }
+code span.in { color: light-dark(#60a0b0, #8cc8ff); font-weight: bold; font-style: italic; }
+code span.wa { color: light-dark(#60a0b0, #8cc8ff); font-weight: bold; font-style: italic; }
+
+/* Attributs et propriétés */
+code span.at { color: light-dark(#7d9029, #a6d166); }
+
+/* Nombres et valeurs */
+code span.bn { color: light-dark(#40a070, #66d9a6); }
+code span.dv { color: light-dark(#40a070, #66d9a6); }
+code span.fl { color: light-dark(#40a070, #66d9a6); }
+
+/* Mots-clés intégrés */
+code span.bu { color: light-dark(#008000, #4db877); }
+
+/* Mots-clés de contrôle */
+code span.cf { color: light-dark(#007020, #52b788); font-weight: bold; }
+code span.kw { color: light-dark(#007020, #52b788); font-weight: bold; }
+code span.ot { color: light-dark(#007020, #52b788); }
+
+/* Caractères et chaînes */
+code span.ch { color: light-dark(#4070a0, #74a9f7); }
+code span.sc { color: light-dark(#4070a0, #74a9f7); }
+code span.st { color: light-dark(#4070a0, #74a9f7); }
+code span.vs { color: light-dark(#4070a0, #74a9f7); }
+
+/* Constantes */
+code span.cn { color: light-dark(#880000, #ff8a80); }
+
+/* Documentation */
+code span.do { color: light-dark(#ba2121, #ff8a80); font-style: italic; }
+
+/* Types de données */
+code span.dt { color: light-dark(#902000, #ff8a6b); }
+
+/* Extensions */
+code span.ex { color: light-dark(#333333, #e0e0e0); }
+
+/* Fonctions */
+code span.fu { color: light-dark(#06287e, #9c88ff); }
+
+/* Imports */
+code span.im { color: light-dark(#008000, #4db877); font-weight: bold; }
+
+/* Opérateurs */
+code span.op { color: light-dark(#666666, #b3b3b3); }
+
+/* Préprocesseur */
+code span.pp { color: light-dark(#bc7a00, #ffb347); }
+
+/* Chaînes spéciales */
+code span.ss { color: light-dark(#bb6688, #ff99cc); }
+
+/* Variables */
+code span.va { color: light-dark(#19177c, #b19cd9); }
+
+.title {
+  text-align: center;
+  font-size: 2.5em;
+  margin-bottom: 0.5em;
+  color: var(--text-color);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.3em;
+  color: light-dark(#666666, #aaaaaa);
+  margin-bottom: 2em;
+}
+
+.author {
+  text-align: center;
+  font-size: 1.1em;
+  margin-bottom: 1em;
+}
+
+.date {
+  text-align: center;
+  color: light-dark(#666666, #aaaaaa);
+  margin-bottom: 2em;
+}
+
+/* Table des matières */
 
 #TOC {
-    border-radius: 20px;
-    /*padding: 4px;*/
-    background-color: #ffffee;
-    border: medium solid black;
+  background-color: var(--blockquote-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  padding: 20px;
+  margin: 2em 0;
 }
 
-/* menu / footer */
+#TOC ul {
+  list-style-type: none;
+  padding-left: 1em;
+}
+
+#TOC > ul {
+  padding-left: 0;
+}
+
+#TOC li {
+  margin: 0.3em 0;
+}
+
+#TOC a {
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+#TOC a:hover {
+  text-decoration: underline;
+}
+
+/* menu / header / footer */
 
 div.right, div.menu, div.header, div.footer {
     text-align: center;
@@ -78,16 +382,12 @@ div.right, div.menu, div.header, div.footer {
     margin-bottom: 0em;
     padding-bottom: 0em;
     border-bottom: thin dotted;*/
-    border: medium outset;
+    border: medium outset var(--group-border);
     border-radius: 10px;
     /*padding: 1em;*/
-    background-color: #ffffee;
-    line-height: 200%;
-    font-size: 0.75em;
-}
-
-div.right {
-    text-align: center;
+    background-color: var(--group-bg);
+    /*line-height: 200%;*/
+    /*font-size: 0.75em;*/
 }
 
 div.right, div.menu {
@@ -132,188 +432,96 @@ div.items {
 
 div.menu a, div.header a, div.footer a, div.items a {
     text-decoration: none;
-    background-color: #444499;
-    color: #ffffff;
+    /*background-color: #444499;*/
+    /*color: #ffffff;*/
     padding: 2px;
-    border: thin dotted #ffffff;
+    border: thin dotted var(--group-border);
     border-radius: 4px;
     white-space: nowrap;
-}
-
-div.menu a:hover, div.header a:hover, div.footer a:hover, div.items a:hover {
-    background-color: #ffffff;
-    color: #444499;
-    border: thin dotted #444499;
-    border-radius: 4px;
 }
 
 div.nowrap {
     white-space: nowrap;
 }
 
-/* titles */
+/* Responsive */
 
-h1 {
-    background-color: #444499;
-    color: #ffffff;
-    border: medium solid black;
-    border-radius: 10px;
-    padding: 0 0 0 16px;
-}
+@media (max-width: 600px) {
+  body {
+    padding: 15px;
+  }
 
-h1 a {
-    text-decoration: none;
-    background-color: #444499;
-    color: #ffffff;
-}
+  h1 {
+    font-size: 1.8em;
+    padding: 15px 20px;
+  }
 
-h2 {
-    background-color: #666666;
-    color: #ffffff;
-    border: medium solid black;
-    border-radius: 6px;
-    padding: 0 0 0 16px;
-}
-
-h2 a {
-    text-decoration: none;
-    background-color: #666666;
-    color: #ffffff;
-}
-
-h3 h4 h5 h6 {
-    background-color: #cccccc;
-    color: #000000;
-}
-
-/* tables */
-
-table {
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-
-table caption {
-    font-weight: bold;
-    margin: 1em;
-}
-
-table th, table thead tr th {
-    border: 1px solid black;
-    border-bottom: 2px solid black;
-    vertical-align: top;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-    font-weight: bold;
-    white-space: nowrap;
-    background-color: #dddddd;
-}
-
-table td, table tbody tr td {
-    border: 1px solid black;
-    vertical-align: top;
-    padding-left: 0.5em;
-    padding-right: 0.5em;
-}
-
-/* code examples */
-
-pre {
-    font-family: monospace;
-    color: #444499;
-    border: 1px solid gray;
-    padding: 5px;
-    background-color: #dddddd;
-    margin: 0 2em 0 2em;
-}
-
-/* GitHub alerts */
-
-div.note, div.tip, div.important, div.warning, div.caution {
-    border-left: thick solid;
-    border-radius: 10px;
-    margin: 0em 2em 0em 4em;
-    padding: 0em 1em 0em 1em;
-    background-color: #efefef;
-}
-/* TODO : comment ajouter une icone ! */
-div.note      { border-left: thick solid #0A66D8; }
-div.tip       { border-left: thick solid #198032; }
-div.important { border-left: thick solid #8353DE; }
-div.warning   { border-left: thick solid #9C6802; }
-div.caution   { border-left: thick solid #D1222C; }
-
-div.note      div.title p:before { content: "🗒 "; }
-div.tip       div.title p:before { content: "💡 "; }
-div.important div.title p:before { content: "❗ "; }
-div.warning   div.title p:before { content: "⚠ "; }
-div.caution   div.title p:before { content: "‼ "; }
-
-div.note      div.title { color: #0A66D8; }
-div.tip       div.title { color: #198032; }
-div.important div.title { color: #8353DE; }
-div.warning   div.title { color: #9C6802; }
-div.caution   div.title { color: #D1222C; }
-
-/* styles pour l'annonce */
-
-div.location
-{
-    font-size: smaller;
-    padding-left: 5em;
-    padding-right: 5em;
-    border: medium dotted red;
-    border-radius: 80px;
-    background-color: #ff0;
-}
-
-div.location a {
-    /*background-color: #ff0;*/
-}
-
-/* annoying cookie notification */
-
-.cookies-notification
-{
-    display: none;
-    border-radius: 4px;
-    margin: 0;
-    padding: 0px;
-    color: white;
-    background-color: #666;
-}
-
-.cookies-notification a {
-    color: white;
-    background-color: black;
-    border: none;
-    padding: 0px;
-}
-
-.cookies-notification a:hover {
-    color: black;
-    background-color: white;
-    border: none;
-}
-
-svg {
-    height: 100%;
-}
-
-/* Fuck Trump */
-p.mwga {
-    color: green;
-    background-color: cyan;
-    text-align: center;
+  h2 {
     font-size: 1.5em;
-    padding: 0px;
-    margin: 0em 0em 0em 0em;
+    padding: 12px 15px;
+  }
+
+  table {
+    font-size: 0.9em;
+  }
+
+  th, td {
+    padding: 8px 10px;
+  }
 }
-p.fucktrump {
-    color: white;
-    background-color: red;
-    text-align: center;
-    font-size: 2em;
-    padding: 0px;
-    margin: 0em 0em 0em 0em;
+
+/* Animations douces pour les changements de thème */
+
+* {
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+/* Support pour les navigateurs qui ne supportent pas light-dark() */
+
+@supports not (color: light-dark(black, white)) {
+  :root {
+    --text-color: #333333;
+    --bg-color: #ffffff;
+    --link-color: #0066cc;
+    --link-hover: #004499;
+    --link-bg-hover: rgba(0, 102, 204, 0.1);
+    --link-border-hover: rgba(0, 102, 204, 0.3);
+    --group-bg: #f8f9fa;
+    --group-border: #dee2e6;
+    --border-color: #dddddd;
+    --code-bg: #f5f5f5;
+    --code-border: #e0e0e0;
+    --blockquote-bg: #f9f9f9;
+    --blockquote-border: #cccccc;
+    --table-border: #dddddd;
+    --table-header-bg: #f0f0f0;
+    --h1-bg: #f8f9fa;
+    --h1-border: #dee2e6;
+    --h2-bg: #f1f3f4;
+    --h2-border: #e9ecef;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --text-color: #e0e0e0;
+      --bg-color: #1a1a1a;
+      --link-color: #66b3ff;
+      --link-hover: #3399ff;
+      --link-bg-hover: rgba(102, 179, 255, 0.15);
+      --link-border-hover: rgba(102, 179, 255, 0.4);
+      --group-bg: #2a2a2a;
+      --group-border: #495057;
+      --border-color: #444444;
+      --code-bg: #2d2d2d;
+      --code-border: #404040;
+      --blockquote-bg: #262626;
+      --blockquote-border: #555555;
+      --table-border: #444444;
+      --table-header-bg: #333333;
+      --h1-bg: #2a2a2a;
+      --h1-border: #495057;
+      --h2-bg: #2d2d2d;
+      --h2-border: #4a4a4a;
+    }
+  }
 }
