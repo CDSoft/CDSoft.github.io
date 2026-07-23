@@ -51,7 +51,7 @@ You’ll find me peacefully orbiting at:
 
 > *Includes actual, functioning repositories and not just a README that says “WIP” for five years.*
 
-- [cdsoft.codeberg.page](https://cdsoft.codeberg.page)
+- [cdelord.fr](https://cdelord.fr)
 
 > *My personal site. Now 73% more static and 98% less JavaScript.*
 

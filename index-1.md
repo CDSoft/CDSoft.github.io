@@ -21,7 +21,7 @@ There, you’ll find no ads, no bots scanning your code for ad targeting, no cor
 You can find me floating peacefully in this newly adopted orbit:
 
 - [codeberg.org/cdsoft](https://codeberg.org/cdsoft) — My repositories, arranged with Vogon-like order but far less paperwork.
-- [cdsoft.codeberg.page](https://cdsoft.codeberg.page) — My website, reincarnated in a fully static dimension.
+- [cdelord.fr](https://cdelord.fr) — My website, reincarnated in a fully static dimension.
 
 ### 🛰️ What about the old GitHub repos?
 

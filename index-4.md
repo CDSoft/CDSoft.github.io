@@ -25,7 +25,7 @@ Just pure, tangy, hand-crafted **open source**. With extra cinnamon. Probably.
 ### 🔪 SLICED AND DICED: Where's Everything Now?
 
 - [codeberg.org/cdsoft](https://codeberg.org/cdsoft) — All the code, all the calm.
-- [cdsoft.codeberg.page](https://cdsoft.codeberg.page) — The site! Now with 100% less telemetry and 300% more static zen.
+- [cdelord.fr](https://cdelord.fr) — The site! Now with 100% less telemetry and 300% more static zen.
 
 Like moving from a pop-up ad jungle to a mountain cabin with fiber optics and birds that chirp in YAML.
 

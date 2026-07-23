@@ -35,7 +35,7 @@ Congratulations. You are now officially That Developer™.
 Your majestic new digital home can be found here:
 
 - [codeberg.org/cdsoft](https://codeberg.org/cdsoft) — Your code, now blessedly ad-free.
-- [cdsoft.codeberg.page](https://cdsoft.codeberg.page) — Your website, probably written in Markdown because of course it is.
+- [cdelord.fr](https://cdelord.fr) — Your website, probably written in Markdown because of course it is.
 
 It’s like GitHub, but without the analytics scripts watching you type.
 Which, honestly, sounds lovely. Unlike the burnt toast in Slot 2.

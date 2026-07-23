@@ -34,7 +34,7 @@ No ads. No spooky trackers. Just you, your code, and a gentle breeze whispering 
 ### 📜 WHERE TO FIND YOUR PHANTOM CODE NOW?
 
 - [codeberg.org/cdsoft](https://codeberg.org/cdsoft) — A vault of spectral repositories.
-- [cdsoft.codeberg.page](https://cdsoft.codeberg.page) — A website preserved in digital formaldehyde.
+- [cdelord.fr](https://cdelord.fr) — A website preserved in digital formaldehyde.
 
 The transition was... smooth. Too smooth. Suspiciously smooth. *Was there a pact involved?* Never mind that now.
 
