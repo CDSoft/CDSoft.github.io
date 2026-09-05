@@ -7,7 +7,7 @@ local html = build.pandoc : new "pandoc.html"
         "--from markdown+emoji",
         "--to html5",
         "--email-obfuscation=javascript",
-        "--mathjax",
+        "--math-method=mathjax",
         "--css", "cdsoft.css",
         --"--embed-resources",
         "--standalone",
@@ -23,6 +23,5 @@ ls "*.md" : foreach(function(md)
     local page = md:splitext()
     html(out) {
         build.ypp("$builddir"/page/page..".md") { md },
-        implicit_in = { header_html, footer_html },
     }
 end)
